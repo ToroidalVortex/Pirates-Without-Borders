@@ -38,7 +38,10 @@ public class ChestPool2 : MonoBehaviour
 
         if (chests.Count == 0)
         {
-            SceneManager.LoadScene("Level_menu");
+            if(moveGlow.level != 4)
+                SceneManager.LoadScene("Level_menu");
+            else
+                SceneManager.LoadScene("Game_Over");
         }
 
 
