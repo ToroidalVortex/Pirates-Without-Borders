@@ -36,7 +36,7 @@ public class ChestPool : MonoBehaviour {
 
         if (chests.Count == 0)
         {
-            SceneManager.LoadScene("Game_Over");
+            SceneManager.LoadScene("Scenes/Game_Over");
         }
 
     

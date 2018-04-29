@@ -8,7 +8,7 @@ public class SplashPageScript : MonoBehaviour {
 	void Update () {
         if (Input.anyKey)
         {
-            SceneManager.LoadScene("Game_Jam");
+            SceneManager.LoadScene("Scenes/Game_Jam");
         }
 	}
 }

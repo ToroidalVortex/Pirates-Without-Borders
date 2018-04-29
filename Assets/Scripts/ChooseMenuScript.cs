@@ -10,11 +10,11 @@ public class ChooseMenuScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E))
         {
-            SceneManager.LoadScene("Game_Jam");
+            SceneManager.LoadScene("Scenes/Game_Jam");
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Scenes/Level1");
         }
     }
 }
