@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ChestPool2 : MonoBehaviour
 {
-
+    public int cycles;
     List<GameObject> chests;
 
     [SerializeField]
@@ -33,19 +33,20 @@ public class ChestPool2 : MonoBehaviour
             }
         }
 
+        // Change scenes after 60 seconds
+        
+
+        if (cycles >= 3000)
+            SceneManager.LoadScene("Scenes/Level_menu");
+        else
+            cycles++;
+
 
         GameObject.Find("Chests").GetComponent<Text>().text = "Chests: " + chests.Count;
 
         if (chests.Count == 0)
         {
-            if(moveGlow.level != 4)
-                SceneManager.LoadScene("Scenes/Level_menu");
-            else
-            {
-                moveGlow.level = 1;
-                SceneManager.LoadScene("Scenes/Game_Over");
-            }
-                
+            SceneManager.LoadScene("Scenes/Level_menu");
         }
 
 
